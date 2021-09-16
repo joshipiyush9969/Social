@@ -118,22 +118,22 @@ const MainApp = () => {
   );
 };
 
-// const AccountStack = createStackNavigator()
-// const MyAcc = () => {
-//   return(
-//     <AccountStack.Navigator initialRouteName='Account' screenOptions={{headerShown:false}}>
-//       <AccountStack.Screen name='Account' component = {AccountScreen} />
-//       <AccountStack.Screen name='MyAccount' component = {MyAccount} />
-//     </AccountStack.Navigator>
-//   )
-// }
+const AccountStack = createStackNavigator()
+const MyAcc = () => {
+  return(
+    <AccountStack.Navigator initialRouteName='Account' screenOptions={{headerShown:false}}>
+      <AccountStack.Screen name='Account' component = {AccountScreen} />
+      <AccountStack.Screen name='MyAccount' component = {MyAccount} />
+    </AccountStack.Navigator>
+  )
+}
 
 const AppFlow = createStackNavigator();
 const AppNav = () => {
   return (
     <NavigationContainer>
       <AppFlow.Navigator screenOptions={{ headerShown: false }}>
-        {/* <AppFlow.Screen name='Auth' component={MyAuth} /> */}
+        <AppFlow.Screen name='Auth' component={MyAuth} />
         <AppFlow.Screen name="Main" component={MainApp} />
       </AppFlow.Navigator>
     </NavigationContainer>
